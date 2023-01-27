@@ -33,7 +33,11 @@ public class ArrayExamples {
     double sum = 0;
     boolean passedLow = false;
     for(double num: arr) {
-      if(passedLow || num != lowest) { sum += num; passedLow = true;}
+      if (passedLow || num != lowest) {
+        sum += num;
+      } else {
+        passedLow = true;
+      }
     }
     return sum / (arr.length - 1);
   }
