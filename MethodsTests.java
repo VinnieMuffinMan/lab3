@@ -17,4 +17,17 @@ public class MethodsTests {
     int[] input1 = { 12, 13, 7, 8, 5, 3};
     assertEquals(EvensExample.sumEvenIndices(input1), 24);
   }
+
+  @Test
+  public void testReversedLength3() {
+    int[] input1 = { 1, 2, 3 };
+    assertArrayEquals(new int[] { 3, 2, 1 }, ArrayExamples.reversed(input1));
+  }
+
+  @Test
+  public void testReverseInPlaceLength3() {
+    int[] input1 = { 1, 2, 3 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[] { 3, 2, 1 }, input1);
+  }
 }
